@@ -1,0 +1,7 @@
+views:
+  - title: main
+    cards:
+      - type: vertical-stack
+        cards:
+          - entity: weather.home
+            type: weather-forecast
