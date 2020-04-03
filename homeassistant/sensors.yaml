@@ -1,0 +1,13 @@
+# sensors
+# esp8266 sensors added by script
+sensor:
+  - platform: mqtt
+    state_topic: 'ESP/+/ESPsensors'
+    value_template: '{{ value_json.fields.humidity }}'
+    name: 'sensor_humidity'
+    unit_of_measurement: '%'
+  - platform: mqtt
+    state_topic: 'ESP/+/ESPsensors'
+    value_template: '{{ value_json.fields.temperature }}'
+    name: 'sensor_temperature_c'
+    unit_of_measurement: 'degrees'
