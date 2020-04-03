@@ -5,3 +5,27 @@ views:
         cards:
           - entity: weather.home
             type: weather-forecast
+          - type: horizontal-stack
+            title: esp8266 Sensors
+            cards:
+              - entity: sensor.sensor_humidity
+                max: 100
+                min: 0
+                name: Humidity
+                theme: default
+                type: gauge
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                min: 0
+                max: 120
+                theme: default
+                entity: sensor.sensor_temperature
+                name: Temperature
+                unit: °C
+          - type: history-graph
+            entities:
+              - entity: sensor.sensor_temperature
+                hours_to_show: 12
+                refresh_interval: 0
+            title: Temperature Sensor History
