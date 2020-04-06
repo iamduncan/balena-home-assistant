@@ -1,6 +1,9 @@
 version: '2'
 volumes:
   config:
+  node-red-data:
+networks:
+  node-red-net:
 services:
   homeassistant:
     build: homeassistant
@@ -27,3 +30,13 @@ services:
       - 'config:/hass-config'
     environment:
       - HC_BASEPATH=/hass-config
+  node-red:
+    image: nodered/node-red:latest
+    environment:
+      - TZ=Europe/London
+    ports:
+      - '1880:1880'
+    networks:
+      - node-red-net
+    volumes:
+      - node-red-data
