@@ -1,9 +1,9 @@
 version: '2'
 volumes:
   config:
-  node-red-data:
+  nodeRedData:
 networks:
-  node-red-net:
+  nodeRedNet:
 services:
   homeassistant:
     build: homeassistant
@@ -37,6 +37,6 @@ services:
     ports:
       - '1880:1880'
     networks:
-      - node-red-net
+      - nodeRedNet
     volumes:
-      - node-red-data
+      - nodeRedData
