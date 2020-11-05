@@ -1,4 +1,4 @@
-FROM homeassistant/raspberrypi3-homeassistant:0.116.2
+FROM homeassistant/raspberrypi3-homeassistant:0.117.4
 
 COPY ui-lovelace.yaml /tmp/ui-lovelace.yaml
 COPY lovelace.sh /tmp/lovelace.sh
