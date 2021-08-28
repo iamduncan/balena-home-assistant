@@ -1,5 +1,5 @@
 ARG MOSQUITTO_VERSION
-FROM arm32v6/eclipse-mosquitto:${MOSQUITTO_VERSION}
+FROM arm32v6/eclipse-mosquitto
 
 COPY mosquitto/config/mosquitto.conf /mosquitto/config/mosquitto.conf
 COPY docker-entrypoint.sh /

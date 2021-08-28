@@ -20,12 +20,10 @@ services:
     build:
       context: .
       dockerfile: ./mosquitto/Dockerfile
-      args:
-        - MOSQUITTO_VERSION=${MOSQUITTO_VERSION:-latest}
     environment:
       - MOSQUITTO_USERNAME=${MOSQUITTO_USERNAME}
       - MOSQUITTO_PASSWORD=${MOSQUITTO_PASSWORD}
-    image: arm32v6/eclipse-mosquitto:${MOSQUITTO_VERSION:-latest}
+    image: arm32v6/eclipse-mosquitto
     ports:
       - '1883:1883'
     restart: always
