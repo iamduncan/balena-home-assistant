@@ -53,3 +53,8 @@ services:
       - 8888:80
     volumes:
       - 'node-red-data:/data'
+  influxdb:
+    restart: always
+    image: arm32v7/influxdb
+    volumes:
+      - 'influx-data:/var/lib/influxdb'
