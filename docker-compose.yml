@@ -2,6 +2,7 @@ version: '2'
 volumes:
   node-red-data:
   config:
+  influx-data:
 networks:
   node-red-net:
 services:
