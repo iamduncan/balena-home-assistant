@@ -1,5 +1,5 @@
 # https://github.com/home-assistant/core/releases
-FROM homeassistant/raspberrypi3-homeassistant:2021.11.4
+FROM homeassistant/raspberrypi3-homeassistant:2022.4.5
 
 COPY ui-lovelace.yaml /tmp/ui-lovelace.yaml
 COPY lovelace.sh /tmp/lovelace.sh
